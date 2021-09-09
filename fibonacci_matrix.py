@@ -57,5 +57,3 @@ for _ in range(cases):
     # f(0), f(1), n-th fibonacci number
     a, b, n = list(map(int, input().split(" ")))
     print(solve(a, b, n))
-
-
