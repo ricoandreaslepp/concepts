@@ -3,7 +3,7 @@ def bin_exp(a, b):
     
     while (b > 0):
 
-        if b%2==1:
+        if b & 1:
             ans *= a
 
         b >>= 1
