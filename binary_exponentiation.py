@@ -11,10 +11,6 @@ def bin_exp(a, b):
 
     return ans
 
-def rec_bin_exp(a, b):
-    #TO-DO
-    return None
-
 def dif_bin_exp(a, b):
     # I wrote this version
     # just to clearify to myself
