@@ -1,6 +1,11 @@
 from math import sqrt
 
 # find divisors in O(sqrt(N)) instead of O(N)
+# ------------------------------------------
+# lies on the idea that any non-prime number
+# can be expressed as: a*b (where 1 < a <=b)
+# if a = b (n//i==i) then we don't count it twice
+# otherwise we've found another divisor
 
 divs = []
 n = int(input())
