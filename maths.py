@@ -6,3 +6,7 @@ def gcd(a, b):
 
 def extended_gcd():
     return None
+
+# simple lcm
+def lcm(a, b)
+    return abs(a*b) // gcd(a, b)
