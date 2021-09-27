@@ -1,7 +1,9 @@
 import sys
+from math import sqrt
 
 def isprime(n):
-    for i in range(2, int(pow(n, 1/2))+1):
+    i = 2
+    while i < sqrt(n):
         if n%i==0:
             return False
     return True
