@@ -1,3 +1,13 @@
+
+# either gives the position that s is at or where
+# it should be placed for the list to remain sorted
+from bisect import bisect_left
+def bisect_search(a, n, s):
+    return min(n, bisect_left(a, s))
+
+# recursive approach
+import sys
+sys.setrecursionlimit(10000)
 def binSearch(arr, start, end, x):
     
     if end >= start:
@@ -18,7 +28,11 @@ def binSearch(arr, start, end, x):
 
 
 # has to be a sorted list
-a = [1, 3, 4, 5, 6]
+a = [1, 3, 4, 5, 6, 12]
 
 for _ in range(15):
-    print(binSearch(a, 0, len(a)-1, int(input("Enter int to find: "))))
+    x = int(input("Enter int to find: "))
+    print(binSearch(a, 0, len(a)-1, x))
+    print(bisect_search(a, len(a), x))
+        
+
