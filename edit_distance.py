@@ -1,11 +1,12 @@
-## some implementations of edit distance or Levenshtein distance
+## some implementations of different types of edit distances or Levenshtein distances
 
 from collections import deque
 def find_distance_path(a, b):
+    ## MODIFIED
     # slower version, but can save all the operations
     # distance to get from a to b with operations on a:
     # 1) erase ANY digit
-    # 2) add on digit to the right
+    # 2) add one digit to the right
     
     a, b = deque(a), deque(b)
     
@@ -29,6 +30,7 @@ def find_distance_path(a, b):
         return popped+abs(len(b)-len(a))
       
 def find_distance(a, b):
+    ## MODIFIED
     # faster version of find_distance_path(), without saving the path
     popped = i = j = 0
     while i<len(b) and j<len(a):
