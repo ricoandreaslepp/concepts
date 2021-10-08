@@ -20,7 +20,7 @@ A few very useful methods/data structures to use in Python
 
 def next():
     print("\n"*2)
-
+### ------------------------------------------------------------------------------------- ###
 ### maintain a list in sorted order without having to sort the list after each insertion. ###
 # For long lists of items with expensive comparison operations, this can be an improvement over the more common approach.
 # Uses a basic bisection algorithm
@@ -28,8 +28,10 @@ def next():
 import bisect
 a = [1, 2, 3, 5, 6, 7]
 
+### ------------------------------------------------------------------------------------- ###
 import itertools
 
+### ------------------------------------------------------------------------------------- ###
 import heapq
 
 a = [110, 25, 38, 49, 20, 95, 33, 87, 80, 90]
@@ -37,6 +39,7 @@ print(f"3 smallest: -> {heapq.nsmallest(3, a)}")
 print(f"4 largest: -> {heapq.nlargest(4, a)}")
 
 next()
+### ------------------------------------------------------------------------------------- ###
 ### extremely useful for rotation or left-right insertion/removals
 # more useful methods -> pop, insert, extend
 from collections import deque
@@ -52,11 +55,11 @@ a.appendleft(9)
 print(f"after prepending 9 -> {a}")
 
 next()
-
+### ------------------------------------------------------------------------------------- ###
 from collections import defaultdict
 d = defaultdict()
 
-
+### ------------------------------------------------------------------------------------- ###
 ### count the number of occurences of an element
 from collections import Counter
 s = "Gatsby and Daisy"
