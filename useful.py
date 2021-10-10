@@ -21,6 +21,8 @@ A few very useful methods/data structures to use in Python
 def next():
     print("\n"*2)
 ### ------------------------------------------------------------------------------------- ###
+### BISECT
+
 ### maintain a list in sorted order without having to sort the list after each insertion. ###
 # For long lists of items with expensive comparison operations, this can be an improvement over the more common approach.
 # Uses a basic bisection algorithm
@@ -29,6 +31,8 @@ import bisect
 a = [1, 2, 3, 5, 6, 7]
 
 ### ------------------------------------------------------------------------------------- ###
+### ITERTOOLS
+
 ### Generate combinations and permutations
 from itertools import combinations, permutations
 
@@ -36,7 +40,21 @@ a = [1,2,3,4]
 print(list(combinations(a, 2)))
 print(list(permutations(a, 2)))
 
+from itertools import accumulate
+
+# default
+# p0, p0+p1, p0+p1+p2, ...
+a = [1, 2, 3, 4, 5]
+print(list(accumulate(a)))
+
+# with custom functions
+# p0, p0*p1, p0*p1*p2
+print(list(accumulate(a, lambda a, b: a*b)))
+
+
 ### ------------------------------------------------------------------------------------- ###
+### HEAPQ
+
 ### Heap Queue algorithm in Python
 
 # A heap has two variants:
@@ -72,6 +90,8 @@ print(f"2 first pops from max heap {-heapq.heappop(a), -heapq.heappop(a)}")
 
 next()
 ### ------------------------------------------------------------------------------------- ###
+### COLLECTIONS
+
 ### extremely useful for rotation or left-right insertion/removals
 # more useful methods -> pop, insert, extend
 from collections import deque
@@ -87,7 +107,7 @@ a.appendleft(9)
 print(f"after prepending 9 -> {a}")
 
 next()
-### ------------------------------------------------------------------------------------- ###
+
 ### A dictionary with a preset value for unknown key
 # can be useful for graphs/trees
 from collections import defaultdict
@@ -101,7 +121,6 @@ for v, i in a:
 
 print(graph)
 
-### ------------------------------------------------------------------------------------- ###
 ### count the number of occurences of an element
 from collections import Counter
 s = "Gatsby and Daisy"
@@ -109,7 +128,8 @@ print(f"count of characters in \"{s}\": -> {Counter(s)}")
 
 next()
 ### ------------------------------------------------------------------------------------- ###
-### Sets
+### SET
+
 # unordered collection of unique elements
 # useful in a lot of different contexts
 
