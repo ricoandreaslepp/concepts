@@ -1,7 +1,5 @@
 """
-###
-
-Very useful stuff in Python
+Useful stuff to know in python
 
 ### MATERIALS
 * https://www.geeksforgeeks.org/top-algorithms-and-data-structures-for-competitive-programming/
