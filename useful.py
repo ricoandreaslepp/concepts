@@ -29,7 +29,12 @@ import bisect
 a = [1, 2, 3, 5, 6, 7]
 
 ### ------------------------------------------------------------------------------------- ###
-import itertools
+### Generate combinations and permutations
+from itertools import combinations, permutations
+
+a = [1,2,3,4]
+print(list(combinations(a, 2)))
+print(list(permutations(a, 2)))
 
 ### ------------------------------------------------------------------------------------- ###
 ### Heap Queue algorithm in Python
@@ -83,8 +88,18 @@ print(f"after prepending 9 -> {a}")
 
 next()
 ### ------------------------------------------------------------------------------------- ###
+### A dictionary with a preset value for unknown key
+# can be useful for graphs/trees
 from collections import defaultdict
-d = defaultdict()
+
+# construct a directed graph
+graph = defaultdict(list)
+a = [[1, 2], [1, 3], [2, 3], [3, 4], [2, 1]]
+
+for v, i in a:
+    graph[v] += [i]
+
+print(graph)
 
 ### ------------------------------------------------------------------------------------- ###
 ### count the number of occurences of an element
