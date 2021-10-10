@@ -1,8 +1,7 @@
 """
 ###
 
-A few very useful methods/data structures to use in Python
-
+Very useful stuff in Python
 
 ### MATERIALS
 * https://www.geeksforgeeks.org/top-algorithms-and-data-structures-for-competitive-programming/
