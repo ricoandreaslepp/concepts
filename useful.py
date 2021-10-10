@@ -32,11 +32,38 @@ a = [1, 2, 3, 5, 6, 7]
 import itertools
 
 ### ------------------------------------------------------------------------------------- ###
-import heapq
+### Heap Queue algorithm in Python
 
-a = [110, 25, 38, 49, 20, 95, 33, 87, 80, 90]
-print(f"3 smallest: -> {heapq.nsmallest(3, a)}")
-print(f"4 largest: -> {heapq.nlargest(4, a)}")
+# A heap has two variants:
+# 1) max-heap, parent is more than or equal to both of its child nodes
+# 2) min-heap, parent is smaller or equal to child nodes
+
+# supports addition and removal of the smallest element in O(log n) time
+# each time the smallest element is popped, maintains structure
+# with each push or pop.
+import heapq
+# heapify converts the iterable into a heap (ds)
+a = [5, 7, 9, 1, 3]
+heapq.heapify(a)
+print(f"heapq: {a}")
+
+# inserts the elements, adjusts order to maintain the heap structure
+heapq.heappush(a, 4)
+print(f"heapq after pushing element 4: {a}")
+
+# largest and smallest elements
+print(f"2 biggest: {heapq.nlargest(2, a)}")
+print(f"2 smallest: {heapq.nsmallest(2, a)}")
+
+# pops the smallest element, adjusts the structure accordingly
+a = [1,2,3,4]
+heapq.heapify(a)
+print(f"2 first pops from min heap {heapq.heappop(a), heapq.heappop(a)}")
+
+# max heap quick implementation
+a = [-i for i in a]
+heapq.heapify(a)
+print(f"2 first pops from max heap {-heapq.heappop(a), -heapq.heappop(a)}")
 
 next()
 ### ------------------------------------------------------------------------------------- ###
