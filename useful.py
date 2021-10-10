@@ -92,3 +92,25 @@ from collections import Counter
 s = "Gatsby and Daisy"
 print(f"count of characters in \"{s}\": -> {Counter(s)}")
 
+next()
+### ------------------------------------------------------------------------------------- ###
+### Sets
+# unordered collection of unique elements
+# useful in a lot of different contexts
+
+a = [1, 2, 2, 3, 4]
+print(f"{a} represented as a set: {set(a)}")
+
+# USEFUL OPERATIONS
+a = set(a)
+b = set([1, 2, 5])
+
+print(f"[-----] working with {a, b}")
+print(f"* elements in 'a or b': {a.union(b)}")
+print(f"* elements in 'a and b': {a.intersection(b)}")
+print(f"* elements in 'a but not in b': {a.difference(b)}")
+print(f"* test if 'every element in a is in b': {a.issubset(b)}")
+print(f"* XOR {a^b} same as {a.symmetric_difference(b)} (in first or second, not in both)")
+
+
+
