@@ -1,4 +1,5 @@
 import sys
+from math import sqrt
 
 # naive
 def isprime(n):
