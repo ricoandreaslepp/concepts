@@ -17,7 +17,7 @@ def testing():
 			logging.info(f"{i} {(ai, bi)}")
 
 def main():
-	level = logging.DEBUG
+	level = logging.DEBUG # easy to setup and better than just random printing
 	fmt = '[%(levelname)s] %(asctime)s - %(message)s'
 	logging.basicConfig(level=level, format=fmt)
 
