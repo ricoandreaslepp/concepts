@@ -1,4 +1,4 @@
-# Pairs of functions for explaining the value of dp contrasted with recursion
+# Pairs of functions for explaining the value of dp
 
 from time import time
 import sys
