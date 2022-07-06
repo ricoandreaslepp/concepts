@@ -1,4 +1,4 @@
-def isSubsequence(s, t):
+def isSubsequence(s : "where to look from", t : "what to look for") -> "True or False":
 
     i, j = 0, 0
     
