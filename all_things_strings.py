@@ -21,6 +21,25 @@ def slice(s : "input string", n : "width of line") -> "a list of output lines, w
     from textwrap import wrap
     return wrap(s, width)
 
+def matchGenerator(s : "input string", k : "input pattern") -> "match object or None":
+    import re
+
+    pattern = re.compile(k)
+    r = pattern.search(s)
+    while 1:
+        yield r # returns None when no more matches are found
+        r = pattern.search(s, r.start()+1)
+
 if __name__=='__main__':
+
+    """ # Example usage of the matchGenerator function
+    match = matchGenerator("terete", "te")
+    while (x:=next(match)):
+        print(x)
+    """
+
+
+    """ # Example usage of the isSubsequence function
     s, t = input("Whole string: "), input("Sequence to check: ")
     print("%s %s a subsequence of %s" % (t, "is" if isSubsequence(s, t) else "is not", s))
+    """
