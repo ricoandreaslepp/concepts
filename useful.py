@@ -31,13 +31,11 @@ a = [1, 2, 3, 5, 6, 7]
 ### ITERTOOLS
 
 ### Generate combinations and permutations
-from itertools import combinations, permutations
+from itertools import combinations, permutations, cycle, accumulate
 
 a = [1,2,3,4]
 print(list(combinations(a, 2)))
 print(list(permutations(a, 2)))
-
-from itertools import accumulate
 
 # default
 # p0, p0+p1, p0+p1+p2, ...
@@ -48,6 +46,13 @@ print(list(accumulate(a)))
 # p0, p0*p1, p0*p1*p2
 print(list(accumulate(a, lambda a, b: a*b)))
 
+# pretty much
+total = 0
+for i in cycle([5, 15, 20]):
+    if total+i >= 200:
+        break
+    print(i, end= " ")
+    total += i
 
 ### ------------------------------------------------------------------------------------- ###
 ### HEAPQ
